@@ -31,7 +31,6 @@ A Regex Tutorial On Matching A Hex
   https://lbesson.mit-license.org/
 
   
-
   ## Credits
   Online Tutorials and Resources:
   - "Regular Expressions" by Mozilla Developer Network (MDN). Available at: https://developer.mozilla.org/
@@ -40,7 +39,9 @@ A Regex Tutorial On Matching A Hex
   - "Uses of Hexadecimal": https://teachcomputerscience.com/uses-of-hexadecimal/
   - "What are Hexadecimals?": https://www.rapidtables.com/convert/number/decimal-
   to-hexadecimal.html
-
+  -  Capturing group: (...): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group
+  - 9 Regular Expressions You Should Know: https://code.tutsplus.com/8-regular-expressions-you-should-know--net-6149t
+  
 University of California Irvine Full Stack Development Bootcamp 2023 Resources:
 
 -  UCI Bootcamp Slack Study Group:  https://ucivirtfsfpt0-bgx3057.slack.com/archives/C056LT7DUUF
