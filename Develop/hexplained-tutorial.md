@@ -1,8 +1,10 @@
 # Hexplained - A Regex Tutorial On Matching A Hex
 
-Matching a hex value using regular expressions is a powerful tool in programming and this tutorial will help you understand the concept. A regular expression (shortened as regex), is a sequence of characters that specifies a match pattern in text. In other words, they're patterns used to identify or match character combinations in strings. Matching a hex value using regex can be useful in many applications, such as validating input, parsing data, and searching for specific patterns. 
+Matching a hex value using regular expressions is a powerful tool in programming and this tutorial will help you understand the concept. 
 
-Now, a hexadecimal is a base-16 numbering system that uses 16 unique digits to represent numbers. It's commonly used to represent binary-coded values in a human-friendly way. Hex values are often used to define colors, memory locations, and other data types in programming.
+A regular expression (shortened as regex), is a sequence of characters that specifies a match pattern in text. In other words, they're patterns used to identify or match character combinations in strings. Matching a hex value using regex can be useful in many applications, such as validating input, parsing data, and searching for specific patterns. 
+
+Now to clarify, a hexadecimal is a base-16 numbering system that uses 16 unique digits to represent numbers. It's commonly used to represent binary-coded values in a human-friendly way. Hex values are often used to define colors, memory locations, and other data types in programming.
 
 ## Summary
 
@@ -12,7 +14,7 @@ The following is the regular expression we will use to match a hex value in this
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i
 
 
-![regex](hex_value_check_regex.jpg)
+![regex](image/regex.png)
 
 ## Table of Contents
 
@@ -32,9 +34,9 @@ The following is the regular expression we will use to match a hex value in this
 /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i
 
 Anchors match the starting and ending points of a string or line. 
-In our case we have ^ in the beginning and ? in the end.  
+In our case we have ^ in the beginning and $ in the end.  
 
-In our hex value regex, the ^ anchor is followed by the # character, meaning we are looking for # to be the first character of our string but because it is followed the ? (a quantifier explained below), we know that the question mark tells the parser that the preceding character is optional, but to capture it if it's there.  We'll explain greedy a little further down. 
+In our hex value regex, the ^ anchor is followed by the # character, meaning we are looking for # to be the first character of our string but because it is followed the ? (a quantifier explained below), we know that the question mark tells the parser that the preceding character is optional, but to capture it if it's there.  We'll explain that a little further down. 
  
  Another anchor is $, which signifies that the string ends with the characters that precede it. In our hex value regex, we have an expression encased in parentheses preceding the $ anchor. 
  
@@ -48,7 +50,7 @@ Quantifiers specify how many times a character or group should be matched. In ou
 
 1.  ? - this quantifier is interpreted as a boolean meaning it will make the preceding character optional.  In our case the ? tells the parser that the # is optional but to capture it if it's there or true.  
 
-2.  {} - the curly brackets are the other quantifier in our case.  Inside the first group (first group of parentheses), we can have two different situations. The first is any lowercase letter between a and f or a number between 0-9 six times. The | (which is the OR Operator explained below) tells us that we can also have three lowercase letters between a and f or numbers between 0-9 instead.  
+2.  {} - the curly brackets are the other quantifier in our case.  Inside the first group (group of parentheses), we can have two different situations. The first is any lowercase letter between a and f or a number between 0-9 six times. The | (which is the OR Operator explained below) tells us that we can also have three lowercase letters between a and f or numbers between 0-9 instead.  
 
 
 ### OR Operator
@@ -64,7 +66,7 @@ In our case the | is the OR Oreprator and it tells us that we can have six of an
 Character classes match a set of characters, such as digits or letters. 
 For example:
 A single character: matches the character itself.
-A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (-). The first character must be smaller in character value than the second character. The character value is the Unicode code point of the character. Because Unicode code points are usually assigned to alphabets in order, [a-z] specifies all lowercase Latin characters, while [α-ω] specifies all lowercase Greek characters. 
+A range of characters: matches any character in the inclusive range. The range is specified by two characters separated by a dash (-). The first character must be smaller in character value than the second character. The character value is the Unicode code point of the character. Because Unicode code points are usually assigned to alphabets in order, [a-z] specifies all lowercase Latin characters. 
 
 In our hex value regex, we use the [a-f0-9] character class to match any lowercase letter a-f or any digit 0-9.
 
